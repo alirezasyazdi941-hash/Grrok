@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <title>تسک‌میت — مدیریت کارها</title>
+  
+  <!-- AnyHTML PWA & Mobile Engine -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="TaskMate">
+  <meta name="theme-color" content="#4f8cff">
+  <link rel="manifest" href="data:application/manifest+json;base64,eyJpZCI6Ii8iLCJuYW1lIjoi2KrYs9qp4oCM2YXbjNiqIOKAlCDZhdiv24zYsduM2Kog2qnYp9ix2YfYpyIsInNob3J0X25hbWUiOiJUYXNrTWF0ZSIsImRlc2NyaXB0aW9uIjoi2KrYs9qp4oCM2YXbjNiqIOKAlCDZhdiv24zYsduM2Kog2qnYp9ix2YfYpyDigJQgR2VuZXJhdGVkIHdpdGggQW55SFRNTCIsInN0YXJ0X3VybCI6Ii4iLCJzY29wZSI6Ii4iLCJkaXNwbGF5Ijoic3RhbmRhbG9uZSIsIm9yaWVudGF0aW9uIjoiYW55IiwidGhlbWVfY29sb3IiOiIjNGY4Y2ZmIiwiYmFja2dyb3VuZF9jb2xvciI6IiMwYjBkMTIiLCJpY29ucyI6W3sic3JjIjoiZGF0YTppbWFnZS9zdmcreG1sO2Jhc2U2NCxQSE4yWnlCNGJXeHVjejBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01DOXpkbWNpSUhacFpYZENiM2c5SWpBZ01DQTFNVElnTlRFeUlpQjNhV1IwYUQwaU5URXlJaUJvWldsbmFIUTlJalV4TWlJK0NpQWdJQ0E4WkdWbWN6NEtJQ0FnSUNBZ1BHeHBibVZoY2tkeVlXUnBaVzUwSUdsa1BTSmlaMGR5WVdRaUlIZ3hQU0l3SlNJZ2VURTlJakFsSWlCNE1qMGlNVEF3SlNJZ2VUSTlJakV3TUNVaVBnb2dJQ0FnSUNBZ0lEeHpkRzl3SUc5bVpuTmxkRDBpTUNVaUlITjBiM0F0WTI5c2IzSTlJaU0wWmpoalptWWlMejRLSUNBZ0lDQWdJQ0E4YzNSdmNDQnZabVp6WlhROUlqRXdNQ1VpSUhOMGIzQXRZMjlzYjNJOUlpTXhNVEU0TWpjaUx6NEtJQ0FnSUNBZ1BDOXNhVzVsWVhKSGNtRmthV1Z1ZEQ0S0lDQWdJQ0FnUEdacGJIUmxjaUJwWkQwaWMyaGhaRzkzSWlCNFBTSXRNVEFsSWlCNVBTSXRNVEFsSWlCM2FXUjBhRDBpTVRJd0pTSWdhR1ZwWjJoMFBTSXhNakFsSWo0S0lDQWdJQ0FnSUNBOFptVkVjbTl3VTJoaFpHOTNJR1I0UFNJd0lpQmtlVDBpT0NJZ2MzUmtSR1YyYVdGMGFXOXVQU0l4TmlJZ1pteHZiMlF0WTI5c2IzSTlJaU13TURBaUlHWnNiMjlrTFc5d1lXTnBkSGs5SWpBdU5EVWlMejRLSUNBZ0lDQWdQQzltYVd4MFpYSStDaUFnSUNBOEwyUmxabk0rQ2lBZ0lDQThjbVZqZENCM2FXUjBhRDBpTlRFeUlpQm9aV2xuYUhROUlqVXhNaUlnY25nOUlqRXhOU0lnWm1sc2JEMGlkWEpzS0NOaVowZHlZV1FwSWk4K0NpQWdJQ0E4Y21WamRDQjRQU0l5TkNJZ2VUMGlNalFpSUhkcFpIUm9QU0kwTmpRaUlHaGxhV2RvZEQwaU5EWTBJaUJ5ZUQwaU9UVWlJR1pwYkd3OUltNXZibVVpSUhOMGNtOXJaVDBpY21kaVlTZ3lOVFVzTWpVMUxESTFOU3d3TGpFNEtTSWdjM1J5YjJ0bExYZHBaSFJvUFNJMklpOCtDaUFnSUNBOFp5Qm1hV3gwWlhJOUluVnliQ2dqYzJoaFpHOTNLU0krQ2lBZ0lDQWdJRHgwWlhoMElIZzlJalV3SlNJZ2VUMGlOVFFsSWlCMFpYaDBMV0Z1WTJodmNqMGliV2xrWkd4bElpQmtiMjFwYm1GdWRDMWlZWE5sYkdsdVpUMGliV2xrWkd4bElpQm1iMjUwTFdaaGJXbHNlVDBpTFdGd2NHeGxMWE41YzNSbGJTeENiR2x1YTAxaFkxTjVjM1JsYlVadmJuUXNKMU5sWjI5bElGVkpKeXhTYjJKdmRHOHNjMkZ1Y3kxelpYSnBaaUlnWm05dWRDMTNaV2xuYUhROUlqa3dNQ0lnWm05dWRDMXphWHBsUFNJeU5EQWlJR1pwYkd3OUlpTm1abVptWm1ZaUlHeGxkSFJsY2kxemNHRmphVzVuUFNJdE5DSStDaUFnSUNBZ0lDQWcyS29LSUNBZ0lDQWdQQzkwWlhoMFBnb2dJQ0FnUEM5blBnb2dJRHd2YzNablBnPT0iLCJzaXplcyI6IjE5MngxOTIgNTEyeDUxMiIsInR5cGUiOiJpbWFnZS9zdmcreG1sIiwicHVycG9zZSI6ImFueSBtYXNrYWJsZSJ9XX0=">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiI+CiAgICA8ZGVmcz4KICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJiZ0dyYWQiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM0ZjhjZmYiLz4KICAgICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxMTE4MjciLz4KICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgICAgPGZpbHRlciBpZD0ic2hhZG93IiB4PSItMTAlIiB5PSItMTAlIiB3aWR0aD0iMTIwJSIgaGVpZ2h0PSIxMjAlIj4KICAgICAgICA8ZmVEcm9wU2hhZG93IGR4PSIwIiBkeT0iOCIgc3RkRGV2aWF0aW9uPSIxNiIgZmxvb2QtY29sb3I9IiMwMDAiIGZsb29kLW9wYWNpdHk9IjAuNDUiLz4KICAgICAgPC9maWx0ZXI+CiAgICA8L2RlZnM+CiAgICA8cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjExNSIgZmlsbD0idXJsKCNiZ0dyYWQpIi8+CiAgICA8cmVjdCB4PSIyNCIgeT0iMjQiIHdpZHRoPSI0NjQiIGhlaWdodD0iNDY0IiByeD0iOTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjE4KSIgc3Ryb2tlLXdpZHRoPSI2Ii8+CiAgICA8ZyBmaWx0ZXI9InVybCgjc2hhZG93KSI+CiAgICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTQlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiBmb250LWZhbWlseT0iLWFwcGxlLXN5c3RlbSxCbGlua01hY1N5c3RlbUZvbnQsJ1NlZ29lIFVJJyxSb2JvdG8sc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjkwMCIgZm9udC1zaXplPSIyNDAiIGZpbGw9IiNmZmZmZmYiIGxldHRlci1zcGFjaW5nPSItNCI+CiAgICAgICAg2KoKICAgICAgPC90ZXh0PgogICAgPC9nPgogIDwvc3ZnPg==">
+  <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiI+CiAgICA8ZGVmcz4KICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJiZ0dyYWQiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM0ZjhjZmYiLz4KICAgICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxMTE4MjciLz4KICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgICAgPGZpbHRlciBpZD0ic2hhZG93IiB4PSItMTAlIiB5PSItMTAlIiB3aWR0aD0iMTIwJSIgaGVpZ2h0PSIxMjAlIj4KICAgICAgICA8ZmVEcm9wU2hhZG93IGR4PSIwIiBkeT0iOCIgc3RkRGV2aWF0aW9uPSIxNiIgZmxvb2QtY29sb3I9IiMwMDAiIGZsb29kLW9wYWNpdHk9IjAuNDUiLz4KICAgICAgPC9maWx0ZXI+CiAgICA8L2RlZnM+CiAgICA8cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjExNSIgZmlsbD0idXJsKCNiZ0dyYWQpIi8+CiAgICA8cmVjdCB4PSIyNCIgeT0iMjQiIHdpZHRoPSI0NjQiIGhlaWdodD0iNDY0IiByeD0iOTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjE4KSIgc3Ryb2tlLXdpZHRoPSI2Ii8+CiAgICA8ZyBmaWx0ZXI9InVybCgjc2hhZG93KSI+CiAgICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTQlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiBmb250LWZhbWlseT0iLWFwcGxlLXN5c3RlbSxCbGlua01hY1N5c3RlbUZvbnQsJ1NlZ29lIFVJJyxSb2JvdG8sc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjkwMCIgZm9udC1zaXplPSIyNDAiIGZpbGw9IiNmZmZmZmYiIGxldHRlci1zcGFjaW5nPSItNCI+CiAgICAgICAg2KoKICAgICAgPC90ZXh0PgogICAgPC9nPgogIDwvc3ZnPg==">
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <style>
+    :root {
+      --bg: #0b0d12;
+      --fg: #e6e9f0;
+      --acc: #4f8cff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 100%;
+      min-height: 100dvh;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Vazirmatn, Tahoma, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      padding-top: env(safe-area-inset-top);
+      padding-bottom: env(safe-area-inset-bottom);
+      padding-left: env(safe-area-inset-left);
+      padding-right: env(safe-area-inset-right);
+    }
+  </style>
+</head>
+<body>
+  
+  <div id="root"></div>
+
+  <!-- React 18 & Babel Standalone CDN -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+    const { useState, useEffect, useRef, useMemo, useCallback, useId } = React;
+
+    // Error Boundary wrapper
+    class ErrorBoundary extends React.Component {
+      constructor(props) {
+        super(props);
+        this.state = { hasError: false, error: null };
+      }
+      static getDerivedStateFromError(error) {
+        return { hasError: true, error };
+      }
+      componentDidCatch(error, errorInfo) {
+        console.error("React Error caught:", error, errorInfo);
+      }
+      render() {
+        if (this.state.hasError) {
+          return (
+            <div style={{
+              minHeight: '100dvh',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: '24px',
+              background: '#0b0d12',
+              color: '#ff6b6b',
+              fontFamily: 'ui-monospace, monospace',
+              textAlign: 'center'
+            }}>
+              <h2 style={{ fontSize: '20px', marginBottom: '8px', color: '#ff85a1' }}>خطای اجرای کامپوننت ری‌اکت</h2>
+              <pre style={{
+                background: '#161a24',
+                border: '1px solid #232836',
+                padding: '16px',
+                borderRadius: '12px',
+                maxWidth: '600px',
+                width: '100%',
+                overflowX: 'auto',
+                fontSize: '12px',
+                textAlign: 'left'
+              }}>
+                {this.state.error?.toString()}
+              </pre>
+            </div>
+          );
+        }
+        return this.props.children;
+      }
+    }
+
+    try {
+      function App() {
+  const [tasks, setTasks] = useState([
+    { id: 1, text: 'بررسی کدهای پروژه AnyHTML', done: true },
+    { id: 2, text: 'خروجی گرفتن به صورت PWA برای آیفون', done: false },
+    { id: 3, text: 'تست حالت آفلاین بدون اینترنت', done: false }
+  ]);
+  const [newText, setNewText] = useState('');
+
+  const toggleTask = (id) => {
+    setTasks(tasks.map(t => t.id === id ? { ...t, done: !t.done } : t));
+  };
+
+  const addTask = (e) => {
+    e.preventDefault();
+    if (!newText.trim()) return;
+    setTasks([...tasks, { id: Date.now(), text: newText.trim(), done: false }]);
+    setNewText('');
+  };
+
+  return (
+    <div className="min-h-screen bg-[#0b0d12] text-[#e6e9f0] p-4 max-w-md mx-auto flex flex-col font-sans">
+      <header className="py-6 border-b border-[#232836] mb-6 flex items-center justify-between">
+        <div>
+          <h1 className="text-2xl font-black tracking-tight text-white flex items-center gap-2">
+            Task<span className="text-[#4f8cff]">Mate</span>
+          </h1>
+          <p className="text-xs text-[#8b93a7]">برنامه PWA مستقل و کاملاً آفلاین</p>
+        </div>
+        <span className="px-2.5 py-1 rounded-full text-xs font-bold bg-[#4f8cff]/15 text-[#4f8cff] border border-[#4f8cff]/30">
+          {tasks.filter(t => t.done).length}/{tasks.length}
+        </span>
+      </header>
+
+      <form onSubmit={addTask} className="flex gap-2 mb-6">
+        <input
+          type="text"
+          value={newText}
+          onChange={e => setNewText(e.target.value)}
+          placeholder="افزودن کار جدید..."
+          className="flex-1 px-4 py-3 rounded-2xl bg-[#12151c] border border-[#232836] text-sm text-white placeholder-[#667089] focus:outline-none focus:border-[#4f8cff]"
+        />
+        <button
+          type="submit"
+          className="px-5 py-3 rounded-2xl bg-[#4f8cff] text-white font-bold text-sm shadow-lg shadow-[#4f8cff]/30 active:scale-95 transition"
+        >
+          افزودن
+        </button>
+      </form>
+
+      <div className="space-y-2.5 flex-1 overflow-y-auto">
+        {tasks.map(task => (
+          <div
+            key={task.id}
+            onClick={() => toggleTask(task.id)}
+            className={"p-4 rounded-2xl border transition-all cursor-pointer flex items-center justify-between " + 
+              (task.done ? 'bg-[#12151c]/50 border-[#232836] opacity-60' : 'bg-[#12151c] border-[#232836] hover:border-[#4f8cff]/50')}
+          >
+            <span className={"text-sm font-medium " + (task.done ? 'line-through text-[#8b93a7]' : 'text-white')}>
+              {task.text}
+            </span>
+            <div className={"w-6 h-6 rounded-lg flex items-center justify-center text-xs font-bold " + 
+              (task.done ? 'bg-emerald-500 text-white' : 'border border-[#32394c]')}>
+              {task.done ? '✓' : ''}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <footer className="mt-6 pt-4 border-t border-[#232836] text-center text-xs text-[#667089]">
+        طراحی شده با AnyHTML • قابلیت اجرای تمام‌صفحه PWA
+      </footer>
+    </div>
+  );
+}
+
+      const AppToRender = typeof App !== 'undefined' ? App : () => (
+        <div style={{ padding: '24px', textAlign: 'center' }}>
+          <h2>برنامه ری‌اکت با موفقیت کامپایل شد</h2>
+        </div>
+      );
+
+      const root = ReactDOM.createRoot(document.getElementById('root'));
+      root.render(
+        <ErrorBoundary>
+          <AppToRender />
+        </ErrorBoundary>
+      );
+    } catch (e) {
+      console.error("Compilation error:", e);
+      document.getElementById('root').innerHTML = '<div style="padding:24px;color:#ff6b6b;font-family:monospace"><b>خطای کامپایل ری‌اکت:</b><br>' + e.message + '</div>';
+    }
+  </script>
+  
+  
+  <script>
+  (function(){
+    // 1. Offline Service Worker Registration
+    if ('serviceWorker' in navigator && !window.location.protocol.startsWith('blob:')) {
+      window.addEventListener('load', function() {
+        try {
+          var swCode = 'const C="pwa-app-cache-v1";self.addEventListener("install",e=>self.skipWaiting());self.addEventListener("activate",e=>self.clients.claim());self.addEventListener("fetch",e=>{e.respondWith(fetch(e.request).catch(()=>caches.match(e.request)))});';
+          var blob = new Blob([swCode], {type: 'application/javascript'});
+          var swUrl = URL.createObjectURL(blob);
+          navigator.serviceWorker.register(swUrl).catch(function(e){});
+        } catch(e){}
+      });
+    }
+
+    // 2. Runtime Error Diagnostics
+    var errorCount = 0;
+    var errorBox = null;
+    function logError(msg, src, line) {
+      errorCount++;
+      if (!errorBox) {
+        errorBox = document.createElement('div');
+        errorBox.id = 'anyhtml-error-bar';
+        errorBox.style.cssText = 'position:fixed;bottom:10px;left:10px;right:10px;max-width:480px;background:#1e1014;border:1px solid #ff4d6d;color:#ff85a1;font:11px/1.4 ui-monospace,Menlo,monospace;padding:8px 12px;border-radius:12px;z-index:99999;box-shadow:0 8px 24px rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:space-between;direction:ltr;text-align:left';
+        errorBox.innerHTML = '<div><b>⚠️ Runtime Error:</b> <span id="err-text"></span></div><button onclick="this.parentElement.remove()" style="background:none;border:none;color:#ff85a1;font-size:16px;cursor:pointer;padding:0 4px">✕</button>';
+        document.body.appendChild(errorBox);
+      }
+      var t = document.getElementById('err-text');
+      if (t) t.textContent = msg + (line ? ' (line ' + line + ')' : '');
+    }
+    window.addEventListener('error', function(e){ logError(e.message, e.filename, e.lineno); });
+    window.addEventListener('unhandledrejection', function(e){ logError(e.reason ? (e.reason.message || e.reason) : 'Promise rejected'); });
+
+    
+    // 3. In-App PWA Install Banner
+    window.addEventListener('DOMContentLoaded', function() {
+      var isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+      if (isStandalone || sessionStorage.getItem('pwa_dismissed')) return;
+
+      var isIOS = /iphone|ipad|ipod/.test(navigator.userAgent.toLowerCase());
+      var deferredPrompt = null;
+
+      var banner = document.createElement('div');
+      banner.id = 'anyhtml-pwa-banner';
+      banner.style.cssText = 'position:fixed;bottom:max(16px,env(safe-area-inset-bottom));left:16px;right:16px;max-width:440px;margin:0 auto;background:#12151c;border:1px solid #232836;border-radius:18px;padding:12px 14px;box-shadow:0 12px 32px rgba(0,0,0,0.6);z-index:99998;display:flex;align-items:center;justify-content:space-between;gap:10px;color:#e6e9f0;font:13px/1.4 -apple-system,BlinkMacSystemFont,Segoe UI,Tahoma,sans-serif;backdrop-filter:blur(10px);direction:rtl;text-align:right';
+
+      banner.innerHTML = '<div style="display:flex;align-items:center;gap:10px;min-width:0">' +
+        '<div style="width:36px;height:36px;border-radius:10px;background:#4f8cff;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:18px;flex-shrink:0">📱</div>' +
+        '<div style="min-width:0"><b style="display:block;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">' + "TaskMate" + '</b><small style="color:#8b93a7;font-size:11px">' + (isIOS ? 'نصب روی صفحه اصلی آیفون' : 'نصب به عنوان اپلیکیشن مستقل') + '</small></div>' +
+        '</div>' +
+        '<div style="display:flex;align-items:center;gap:6px;flex-shrink:0">' +
+        '<button id="pwa-install-act" style="background:#4f8cff;border:none;color:#fff;font:inherit;font-size:12px;font-weight:600;padding:6px 12px;border-radius:10px;cursor:pointer">نصب</button>' +
+        '<button id="pwa-dismiss" style="background:transparent;border:none;color:#8b93a7;font-size:16px;cursor:pointer;padding:4px 6px">✕</button>' +
+        '</div>';
+
+      document.body.appendChild(banner);
+
+      document.getElementById('pwa-dismiss').onclick = function() {
+        banner.remove();
+        sessionStorage.setItem('pwa_dismissed', '1');
+      };
+
+      var actBtn = document.getElementById('pwa-install-act');
+      if (isIOS) {
+        actBtn.textContent = 'راهنما';
+        actBtn.onclick = function() {
+          alert('برای اجرای تمام‌صفحه مانند یک اپلیکیشن واقعی:\n\n۱. دکمه Share (اشتراک‌گذاری) در سافاری را بزنید.\n۲. گزینه Add to Home Screen (افزودن به صفحه اصلی) را انتخاب کنید.');
+        };
+      } else {
+        window.addEventListener('beforeinstallprompt', function(e) {
+          e.preventDefault();
+          deferredPrompt = e;
+          actBtn.onclick = function() {
+            if (deferredPrompt) {
+              deferredPrompt.prompt();
+              deferredPrompt.userChoice.then(function(r) {
+                if (r.outcome === 'accepted') banner.remove();
+                deferredPrompt = null;
+              });
+            }
+          };
+        });
+      }
+    });
+    
+  })();
+  </script>
+  
+</body>
+</html>
